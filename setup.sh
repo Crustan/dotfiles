@@ -40,3 +40,42 @@ mas install 1445910651 # Dynamo Safari Extension
 mas install 425424353 # The Unarchiver
 mas install 967805235 # Paste
 mas install 1449412482 # Reeder
+
+#"Disabling OS X Gate Keeper"
+#"(You'll be able to install any app you want from here on, not just Mac App Store apps)"
+sudo spctl --master-disable
+sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+#"Automatically quit printer app once the print jobs complete"
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+#"Enabling subpixel font rendering on non-Apple LCDs"
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
+#"Showing all filename extensions in Finder by default"
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+#"Use column view in all Finder windows by default"
+defaults write com.apple.finder FXPreferredViewStyle Clmv
+
+#"Setting screenshots location to ~/Desktop"
+defaults write com.apple.screencapture location -string "$HOME/Desktop"
+
+#"Setting screenshot format to PNG"
+defaults write com.apple.screencapture type -string "png"
+
+#"Enabling the Develop menu and the Web Inspector in Safari"
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
+
+#"Hide the donate message"
+defaults write org.m0k.transmission WarningDonate -bool false
+
+#"Hide the legal disclaimer"
+defaults write org.m0k.transmission WarningLegal -bool false
+
+killall Finder
+
+echo "Done!"
