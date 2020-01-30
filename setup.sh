@@ -33,14 +33,6 @@ curl -L http://install.ohmyz.sh | sh
 echo "Setting ZSH as shell..."
 chsh -s /bin/zsh
 
-# Install from Mac App Store
-mas install 937984704 # Amphetamine
-mas install 441258766 # Magnet
-mas install 1445910651 # Dynamo Safari Extension
-mas install 425424353 # The Unarchiver
-mas install 967805235 # Paste
-mas install 1449412482 # Reeder
-
 #"Disabling OS X Gate Keeper"
 #"(You'll be able to install any app you want from here on, not just Mac App Store apps)"
 sudo spctl --master-disable
