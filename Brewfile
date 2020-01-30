@@ -45,6 +45,8 @@ cask "visual-studio-code"
 mas "Amphetamine", id: 937984704
 mas "Magnet", id: 441258766
 mas "Dynamo Safari Extension", id: 1445910651
-mas "The Unarchiver", id: 425424353
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Paste", id: 967805235
+mas "The Unarchiver", id: 425424353
 mas "Reeder", id: 1449412482
