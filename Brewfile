@@ -39,3 +39,10 @@ cask "soda-player"
 cask "startupizer"
 cask "transmission"
 cask "visual-studio-code"
+# Install from Mac App Store
+mas "Amphetamine", id: 937984704
+mas "Magnet", id: 441258766
+mas "Dynamo Safari Extension", id: 1445910651
+mas "The Unarchiver", id: 425424353
+mas "Paste", id: 967805235
+mas "Reeder", id: 1449412482
