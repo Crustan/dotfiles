@@ -1,9 +1,9 @@
-echo "Creating an SSH key for you..."
-ssh-keygen -t rsa
+#echo "Creating an SSH key for you..."
+#ssh-keygen -t rsa
 
-echo "Please add this public key to Github"
-echo "https://github.com/account/ssh"
-read -p "Press [Enter] key after this..."
+#echo "Please add this public key to Github"
+#echo "https://github.com/account/ssh"
+#read -p "Press [Enter] key after this..."
 
 # Check for Homebrew,
 # Install if we don't have it
