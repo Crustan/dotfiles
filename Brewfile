@@ -51,5 +51,6 @@ mas "Dynamo Safari Extension", id: 1445910651
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paste", id: 967805235
+mas "PiPifier Safari Extension",id: 1160374471
 mas "The Unarchiver", id: 425424353
 mas "Reeder", id: 1449412482
