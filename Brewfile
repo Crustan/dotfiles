@@ -15,10 +15,10 @@ brew "terraform"
 brew "youtube-dl"
 brew "zplug"
 brew "zsh"
-cask "1password"
+cask "1password" # requires license
 cask "anybar"
 cask "bankid"
-cask "bartender"
+cask "bartender" # requires license
 cask "browserosaurus"
 cask "caption"
 cask "catch"
@@ -29,18 +29,18 @@ cask "docker"
 cask "flux"
 cask "google-backup-and-sync"
 cask "google-chrome"
-cask "hazel"
+cask "hazel" # requires license
 cask "karabiner-elements"
 cask "notion"
 cask "plex"
 cask "plex-media-server"
-cask "parallels"
+cask "parallels" # requires license
 cask "postman"
 cask "quitter"
-cask "sketch"
+cask "sketch" # requires license
 cask "slack"
 cask "soda-player"
-cask "startupizer"
+cask "startupizer" # requires license
 cask "transmission"
 cask "visual-studio-code"
 # Install from Mac App Store
