@@ -19,7 +19,7 @@ git config --global user.email christian.v.soderberg@gmail.com
 
 echo "Copying dotfiles from Github"
 cd ~
-git clone git@github.com:bradp/dotfiles.git .dotfiles
+git clone git@github.com:Crustan/dotfiles.git .dotfiles
 cd .dotfiles
 
 # Install Homebrew bundle
