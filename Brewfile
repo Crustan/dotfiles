@@ -44,6 +44,7 @@ cask "startupizer"
 cask "transmission"
 cask "visual-studio-code"
 # Install from Mac App Store
+mas "1Blocker", id: 1107421413
 mas "Amphetamine", id: 937984704
 mas "Magnet", id: 441258766
 mas "Dynamo Safari Extension", id: 1445910651
