@@ -39,6 +39,9 @@ sudo spctl --master-disable
 sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
+#"Don’t automatically rearrange Spaces based on most recent use"
+defaults write com.apple.dock mru-spaces -bool false
+
 #"Automatically quit printer app once the print jobs complete"
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
