@@ -14,5 +14,10 @@ Simply run the `setup.sh` script in this repo:
 bash <(curl -Ls https://raw.githubusercontent.com/Crustan/dotfiles/master/setup.sh)
 ```
 
+## Global `npm` packages
+```
+npm install -g trash-cli ttab depcheck
+```
+
 ## VS Code Settings and Extensions
 Syncing of settings and extensions for VS Code is no longer made with the Settings Sync extension, but is now made with the built-in sync functionality in VS Code.
