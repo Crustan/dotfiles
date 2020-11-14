@@ -9,7 +9,7 @@ npm i -D eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-import
 ```
 
 ## Setting up a new Mac
-Simply run the `startup.sh` script in this repo:
+Simply run the `setup.sh` script in this repo:
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/Crustan/dotfiles/master/setup.sh)
 ```
