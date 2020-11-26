@@ -6,6 +6,7 @@ tap "homebrew/core"
 tap "homebrew/cask-fonts"
 brew "ffmpeg"
 brew "fish"
+brew "gh"
 # brew icecast
 brew "imagemagick"
 brew "mas"
