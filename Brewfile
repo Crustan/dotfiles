@@ -3,6 +3,7 @@ cask_args appdir: '/Applications'
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "homebrew/cask-fonts"
 brew "ffmpeg"
 brew "fish"
 # brew icecast
@@ -43,6 +44,7 @@ cask "soda-player"
 cask "startupizer" # requires license
 cask "transmission"
 cask "visual-studio-code"
+cask "font-fira-code"
 # Install from Mac App Store
 mas "1Blocker", id: 1107421413
 mas "Amphetamine", id: 937984704
