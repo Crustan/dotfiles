@@ -39,6 +39,7 @@ cask "plex-media-server"
 cask "parallels" # requires license
 cask "postman"
 cask "quitter"
+cask "rectangle"
 cask "sketch" # requires license
 cask "slack"
 cask "soda-player"
@@ -49,7 +50,7 @@ cask "font-fira-code"
 # Install from Mac App Store
 mas "1Blocker", id: 1107421413
 mas "Amphetamine", id: 937984704
-mas "Magnet", id: 441258766
+# mas "Magnet", id: 441258766 replaced by rectangle
 mas "Dynamo Safari Extension", id: 1445910651
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
