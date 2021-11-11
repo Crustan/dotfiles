@@ -21,22 +21,23 @@ cask "bartender" # requires license
 cask "browserosaurus"
 # cask "caption"
 # cask "catch"
+# cask "cheatsheet"
 cask "cleanmymac" # requires license
 cask "docker"
 cask "figma"
 cask "flux"
 cask "google-backup-and-sync"
 cask "google-chrome"
+cask "iina"
 # cask "hazel" # requires license
 cask "karabiner-elements"
 cask "messenger"
 cask "nightfall"
 cask "notion"
 cask "plex"
-cask "plex-media-server"
+# cask "plex-media-server"
 cask "parallels" # requires license
 cask "postman"
-cask "quicklook-json"
 cask "quitter"
 cask "rectangle"
 cask "slack"
@@ -65,3 +66,6 @@ mas "Tab Suspender", id: 1495356253
 mas "Take a Break", id: 1457158844
 mas "Grammarly Safari Extension", id: 1462114288
 mas "JSONPeep", id: 1458969831
+
+# Optional
+# cascadea
