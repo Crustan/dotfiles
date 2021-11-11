@@ -39,6 +39,7 @@ cask "plex"
 # cask "parallels" # requires license
 cask "pika"
 cask "postman"
+cask "proxyman"
 cask "quitter"
 cask "rectangle"
 cask "slack"
