@@ -36,7 +36,8 @@ cask "nightfall"
 cask "notion"
 cask "plex"
 # cask "plex-media-server"
-cask "parallels" # requires license
+# cask "parallels" # requires license
+cask "pika"
 cask "postman"
 cask "quitter"
 cask "rectangle"
