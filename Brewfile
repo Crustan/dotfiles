@@ -29,6 +29,7 @@ cask "google-backup-and-sync"
 cask "google-chrome"
 # cask "hazel" # requires license
 cask "karabiner-elements"
+cask "messenger"
 cask "nightfall"
 cask "notion"
 cask "plex"
@@ -44,14 +45,23 @@ cask "startupizer" # requires license
 cask "tableplus" # requires pro license
 cask "transmission"
 cask "visual-studio-code"
+cask "unlox"
+# Fonts
 cask "font-fira-code"
 # Install from Mac App Store
 mas "1Blocker", id: 1107421413
 mas "Amphetamine", id: 937984704
+mas "Bredbandskollen", id: 1147976909
 mas "Dynamo Safari Extension", id: 1445910651
+mas "Hush Safari Extension", id: 1544743900
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paste", id: 967805235
 mas "PiPifier Safari Extension",id: 1160374471
 mas "The Unarchiver", id: 425424353
 mas "Reeder", id: 1449412482
+mas "Scenecuts Helper", id: 1540491573
+mas "Tab Suspender", id: 1495356253
+mas "Take a Break", id: 1457158844
+mas "Grammarly Safari Extension", id: 1462114288
+mas "JSONPeep", id: 1458969831
