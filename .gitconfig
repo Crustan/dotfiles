@@ -1,0 +1,12 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Christian Söderberg
+	email = christian.v.soderberg@gmail.com
+[fetch]
+	prune = true
+[push]
+	default = current
