@@ -1,23 +1,23 @@
 # My dotfiles
 
-This is a constantly updated list of my dotfiles and must have VS Code extenstions.
+A constantly updated collection of my dotfiles. 
+Contains settings for zsh, Karabiner Elements, Mac OS, apps.
 
-[OUTDATED] For quick installation of dev dependencies:
-
+## Installation
+Simply run the `setup.sh` script in this repo for quickly setting up a new Mac:
+```bash
+curl -o- https://raw.githubusercontent.com/Crustan/dotfiles/master/setup.sh | bash
+# or
+# bash <(curl -Ls https://raw.githubusercontent.com/Crustan/dotfiles/master/setup.sh)
 ```
-npm i -D eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
-```
-
-## Setting up a new Mac
-Simply run the `setup.sh` script in this repo:
-```
-bash <(curl -Ls https://raw.githubusercontent.com/Crustan/dotfiles/master/setup.sh)
+or download the whole repo first: 
+```bash
+git clone https://github.com/Crustan/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./setup.sh
 ```
 
 ## Global `npm` packages
 ```
 npm install -g trash-cli depcheck
 ```
-
-## VS Code Settings and Extensions
-Syncing of settings and extensions for VS Code is no longer made with the Settings Sync extension, but is now made with the built-in sync functionality in VS Code.
