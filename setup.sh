@@ -35,6 +35,10 @@ cd ~/.dotfiles
 echo "Setting up symlinks..."
 source setup/link.sh
 
+# Setting up mac settings
+echo "Setting up Mac OS..."
+source setup/macos.sh
+
 # Install Homebrew bundle
 brew bundle
 cd ~
@@ -55,8 +59,6 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
 echo "Installing Node..."
 nvm install node
-
-source setup/macos.sh
 
 # Restore mackup
 echo "Restoring mackup backup..."

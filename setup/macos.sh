@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-
+loginwindowtext="In case of loss, call +46 725 1337 46.\n Computer will be wiped, bricked and with no use if stolen."
 echo -e "\n\nSetting up MacOS settings"
 echo "=============================="
 
@@ -61,10 +61,15 @@ defaults write com.apple.dock launchanim -bool false
 defaults write com.apple.dock persistent-apps -array-add '{tile-type="spacer-tile";}'
 defaults write com.apple.dock persistent-apps -array-add '{tile-type="spacer-tile";}'
 
+defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText $loginwindowtext
+
 #"Hide the donate message in Transmission"
-defaults write org.m0k.transmission WarningDonate -bool false
+#defaults write org.m0k.transmission WarningDonate -bool false
 
 #"Hide the legal disclaimer in Transmission"
-defaults write org.m0k.transmission WarningLegal -bool false
+#defaults write org.m0k.transmission WarningLegal -bool false
 
-killall Finder
+# Change desktop background
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/crustan/.dotfiles/images/desktop.jpg"'
+
+killall Finder Dock

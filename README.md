@@ -14,7 +14,7 @@ For a smooth setup on a new Mac, start with the following steps before installin
 Simply run the `setup.sh` script in this repo for quickly setting up a new Mac:
 
 ```bash
-curl -o- https://raw.githubusercontent.com/Crustan/dotfiles/master/setup.sh | bash
+curl -o- https://raw.githubusercontent.com/Crustan/dotfiles/master/setup.sh | sudo bash
 # or
 # bash <(curl -Ls https://raw.githubusercontent.com/Crustan/dotfiles/master/setup.sh)
 ```
