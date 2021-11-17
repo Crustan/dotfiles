@@ -19,23 +19,34 @@ for config in $DOTFILES/config/*; do
     fi
 done
 
-echo -e "\nCreating symlink for .zshrc"
+echo -e "\nInstalling .zshrc"
 echo "=============================="
-zshtarget=$HOME/.zshrc
-if [ -e $zshtarget ]; then
-    echo "~${zshtarget#$HOME} already exists... Skipping."
+zshrc_target=$HOME/.zshrc
+if [ -e $zshrc_target ]; then
+    echo "~${zshrc_target#$HOME} already exists... Skipping."
 else
     echo "Creating symlink for .zshrc"
-    ln -s $file $DOTFILES/zsh/.zshrc $zshtarget
+    ln -s $file $DOTFILES/zsh/.zshrc $zshrc_target
 fi
 
-echo -e "\nCreating symlink for hot keys"
+echo -e "\nInstalling .mackup.cfg"
 echo "=============================="
-hktarget=$HOME/Library/Preferences/com.apple.symbolichotkeys.plist
-hkfile=$DOTFILES/com.apple.symbolichotkeys.plist
-if [ -e $hktarget ]; then
-    echo "~${hktarget#$HOME} already exists... Skipping."
+mackup_target=$HOME/.mackup.cfg
+if [ -e $mackup_target ]; then
+    echo "~${mackup_target#$HOME} already exists... Skipping."
 else
-    echo "Creating symlink for $hkfile"
-    ln -s $hkfile $hktarget
+    echo "Creating symlink for .mackup.cfg"
+    ln -s $file $DOTFILES/.mackup.cfg $mackup_target
 fi
+
+echo -e "\nInstalling App settings"
+echo "=============================="
+for plist in $DOTFILES/apple/*; do
+    plist_target=$HOME/Library/Preferences/$( basename $plist )
+    if [ -e $plist_target ]; then
+        echo "~${plist_target#$HOME} already exists... Skipping."
+    else
+        echo "Creating symlink for $plist"
+        ln -s $plist $plist_target
+    fi
+done

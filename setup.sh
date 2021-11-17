@@ -24,11 +24,16 @@ git config --global user.email christian.v.soderberg@gmail.com
 git config --global fetch.prune true
 git config --global push.default current
 
-echo "Copying dotfiles from Github..."
-git clone git@github.com:Crustan/dotfiles.git ~/.dotfiles
+if [ ! -d $HOME/.dotfiles ]; then
+    echo "Cloning .dotfiles into ~/.dotfiles"
+    # git clone git@github.com:Crustan/dotfiles.git ~/.dotfiles
+    git clone https://github.com/Crustan/dotfiles.git ~/.dotfiles
+fi
 cd ~/.dotfiles
 
-# source setup/link.sh
+# Setting up symlinks
+echo "Setting up symlinks..."
+source setup/link.sh
 
 # Install Homebrew bundle
 brew bundle
@@ -52,5 +57,9 @@ echo "Installing Node..."
 nvm install node
 
 source setup/macos.sh
+
+# Restore mackup
+echo "Restoring mackup backup..."
+mackup restore
 
 echo "Done! Reload terminal"
