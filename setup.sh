@@ -62,4 +62,7 @@ source setup/macos.sh
 echo "Restoring mackup backup..."
 mackup restore
 
+echo "Installing global NPM packages"
+npm install -g trash-cli depcheck
+
 echo "Done! Reload terminal"
