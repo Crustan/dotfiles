@@ -26,3 +26,10 @@ git clone https://github.com/Crustan/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./setup.sh
 ```
+
+## Post-requisities
+
+1. Sign in to VS Code.
+2. Sign in to Google
+3. Sign in to Reeder
+4. Download apps from secret place
