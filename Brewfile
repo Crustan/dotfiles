@@ -44,8 +44,8 @@ cask "proxyman"
 cask "quitter"
 cask "rectangle"
 cask "slack"
-cask "soda-player"
-cask "startupizer" # requires license
+# cask "soda-player"
+# cask "startupizer" # requires license
 cask "tableplus" # requires pro license
 cask "telegram-desktop"
 cask "transmission"
