@@ -11,8 +11,6 @@ if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-# Reload zsh
-source ~/.zshrc
 
 if test ! $(which brew); then
   echo "Installing homebrew failed, exiting script..."
@@ -50,17 +48,6 @@ echo -e "\n\nSetting up Mac OS..."
 echo "=============================="
 source setup/macos.sh
 
-# Reload zsh
-source ~/.zshrc
-
-cd ~
-
-echo -e "\n\nSetting ZSH as default shell..."
-echo "=============================="
-chsh -s $(which zsh)
-
-# echo "Installing Oh My ZSH..."
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 if [ ! -d $HOME/.zsh ]; then
   echo -e "\n\nSetting up ZSH plugins..."
   echo "=============================="
@@ -69,6 +56,8 @@ if [ ! -d $HOME/.zsh ]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
   git clone https://github.com/reobin/typewritten.git ~/.zsh/typewritten
 fi
+
+cd ~
 
 # Reload zsh
 source ~/.zshrc
