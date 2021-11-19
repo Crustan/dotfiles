@@ -15,6 +15,9 @@ if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+# Reload zsh
+source ~/.zshrc
+
 if test ! $(which brew); then
   echo "Installing homebrew failed, exiting script..."
   exit
@@ -42,10 +45,12 @@ echo -e "\n\nInstall Homebrew bundle..."
 echo "=============================="
 brew bundle
 
-
 echo -e "\n\nSetting up Mac OS..."
 echo "=============================="
 source setup/macos.sh
+
+# Reload zsh
+source ~/.zshrc
 
 cd ~
 
@@ -64,9 +69,15 @@ if [ ! -d $HOME/.zsh ]; then
   git clone https://github.com/reobin/typewritten.git ~/.zsh/typewritten
 fi
 
+# Reload zsh
+source ~/.zshrc
+
 echo -e "\n\nInstalling Node..."
 echo "=============================="
 nvm install node
+
+# Reload zsh
+source ~/.zshrc
 
 echo -e "\n\nRestoring mackup backup..."
 echo "=============================="
