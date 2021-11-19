@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/opt/homebrew/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 # export ZSH=$HOME/.zsh
@@ -9,7 +9,6 @@ export TYPEWRITTEN_PROMPT_LAYOUT="pure"
 export TYPEWRITTEN_CURSOR="beam"
 export TYPEWRITTEN_SYMBOL="->"
 export TYPEWRITTEN_RELATIVE_PATH="adaptive"
-
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
