@@ -50,14 +50,14 @@ source setup/macos.sh
 cd ~
 
 # Reload zsh
-source ~/.zshrc
+# source ~/.zshrc
 
 echo -e "\n\nInstalling Node..."
 echo "=============================="
 nvm install node
 
 # Reload zsh
-source ~/.zshrc
+# source ~/.zshrc
 
 echo -e "\n\nRestoring mackup backup..."
 echo "=============================="
