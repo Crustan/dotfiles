@@ -28,7 +28,7 @@ cask "browserosaurus"
 cask "cleanmymac" # requires license
 cask "figma"
 cask "flux"
-cask "google-backup-and-sync"
+cask "google-drive"
 cask "google-chrome"
 cask "iina"
 # cask "hazel" # requires license
