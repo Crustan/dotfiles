@@ -8,6 +8,17 @@ Contains settings for zsh, Karabiner Elements, Mac OS, apps, etc...
 For a smooth setup on a new Mac, start with the following steps before installing the dotfiles.
 
 1. Sign in to iCloud.
+2. Install Xcode
+
+```bash
+sudo xcode-select --install
+```
+
+3. Install Rosetta 2 (needed for some apps installed with Homebrew)
+
+```bash
+sudo softwareupdate --install-rosetta
+```
 
 ## Installation
 

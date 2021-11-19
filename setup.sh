@@ -5,14 +5,6 @@
 #echo "https://github.com/account/ssh"
 #read -p "Press [Enter] key after this..."
 
-echo -e "\n\nInstalling xcode"
-echo "=============================="
-xcode-select --install
-
-echo -e "\n\nInstalling Rosetta 2"
-echo "=============================="
-softwareupdate --install-rosetta
-
 echo -e "\n\nSetting up symlinks..."
 echo "=============================="
 source setup/link.sh
