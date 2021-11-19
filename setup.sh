@@ -47,7 +47,6 @@ echo -e "\n\nSetting up Mac OS..."
 echo "=============================="
 source setup/macos.sh
 
-
 cd ~
 
 # Reload zsh
