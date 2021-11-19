@@ -5,10 +5,6 @@
 #echo "https://github.com/account/ssh"
 #read -p "Press [Enter] key after this..."
 
-echo -e "\n\nSetting up symlinks..."
-echo "=============================="
-source setup/link.sh
-
 if test ! $(which brew); then
   echo -e "\n\nInstalling homebrew"
   echo "=============================="
@@ -27,9 +23,9 @@ echo -e "\n\nUpdating homebrew"
 echo "=============================="
 brew update
 
-echo "=============================="
 if test ! $(which git); then
   echo -e "\n\nInstalling git"
+  echo "=============================="
   brew install git
 fi
 
@@ -39,7 +35,12 @@ if [ ! -d $HOME/.dotfiles ]; then
     #requires ssh git clone git@github.com:Crustan/dotfiles.git ~/.dotfiles 
     git clone https://github.com/Crustan/dotfiles.git ~/.dotfiles
 fi
+
 cd ~/.dotfiles
+
+echo -e "\n\nSetting up symlinks..."
+echo "=============================="
+source setup/link.sh
 
 echo -e "\n\nInstall Homebrew bundle..."
 echo "=============================="
