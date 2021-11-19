@@ -25,7 +25,7 @@ sudo softwareupdate --install-rosetta
 Simply run the `setup.sh` script in this repo for quickly setting up a new Mac:
 
 ```bash
-sudo curl -o- https://raw.githubusercontent.com/Crustan/dotfiles/main/setup.sh | bash
+sudo curl -o- https://raw.githubusercontent.com/Crustan/dotfiles/main/setup.sh | zsh #or bash
 # or
 # bash <(curl -Ls https://raw.githubusercontent.com/Crustan/dotfiles/master/setup.sh)
 ```
