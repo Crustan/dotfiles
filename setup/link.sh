@@ -19,6 +19,15 @@ for config in $DOTFILES/config/*; do
     fi
 done
 
+if [ ! -d $HOME/.zsh ]; then
+  echo -e "\n\nSetting up ZSH plugins..."
+  echo "=============================="
+  mkdir -p ~/.zsh
+  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
+  git clone https://github.com/reobin/typewritten.git ~/.zsh/typewritten
+fi
+
 echo -e "\nInstalling .zshrc"
 echo "=============================="
 zshrc_target=$HOME/.zshrc
@@ -27,15 +36,6 @@ if [ -e $zshrc_target ]; then
 else
     echo "Creating symlink for .zshrc"
     ln -s $file $DOTFILES/zsh/.zshrc $zshrc_target
-fi
-
-if [ ! -d $HOME/.zsh ]; then
-  echo -e "\n\nSetting up ZSH plugins..."
-  echo "=============================="
-  mkdir -p ~/.zsh
-  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
-  git clone https://github.com/reobin/typewritten.git ~/.zsh/typewritten
 fi
 
 echo -e "\nInstalling .mackup.cfg"
