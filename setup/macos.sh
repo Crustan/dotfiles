@@ -61,7 +61,7 @@ defaults write com.apple.dock launchanim -bool false
 defaults write com.apple.dock persistent-apps -array-add '{tile-type="spacer-tile";}'
 defaults write com.apple.dock persistent-apps -array-add '{tile-type="spacer-tile";}'
 
-defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText $loginwindowtext
+defaults write com.apple.loginwindow LoginwindowText $loginwindowtext
 
 #"Hide the donate message in Transmission"
 #defaults write org.m0k.transmission WarningDonate -bool false
@@ -72,4 +72,5 @@ defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText $login
 # Change desktop background
 osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/crustan/.dotfiles/images/desktop.jpg"'
 
+killall SystemUIServer
 killall Finder Dock
