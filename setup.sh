@@ -11,7 +11,6 @@ if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-
 if test ! $(which brew); then
   echo "Installing homebrew failed, exiting script..."
   exit
@@ -48,14 +47,6 @@ echo -e "\n\nSetting up Mac OS..."
 echo "=============================="
 source setup/macos.sh
 
-if [ ! -d $HOME/.zsh ]; then
-  echo -e "\n\nSetting up ZSH plugins..."
-  echo "=============================="
-  mkdir -p ~/.zsh
-  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
-  git clone https://github.com/reobin/typewritten.git ~/.zsh/typewritten
-fi
 
 cd ~
 

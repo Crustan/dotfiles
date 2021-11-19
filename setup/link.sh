@@ -29,6 +29,15 @@ else
     ln -s $file $DOTFILES/zsh/.zshrc $zshrc_target
 fi
 
+if [ ! -d $HOME/.zsh ]; then
+  echo -e "\n\nSetting up ZSH plugins..."
+  echo "=============================="
+  mkdir -p ~/.zsh
+  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
+  git clone https://github.com/reobin/typewritten.git ~/.zsh/typewritten
+fi
+
 echo -e "\nInstalling .mackup.cfg"
 echo "=============================="
 mackup_target=$HOME/.mackup.cfg
