@@ -9,6 +9,10 @@ echo -e "\n\nInstalling xcode"
 echo "=============================="
 xcode-select --install
 
+echo -e "\n\nSetting up symlinks..."
+echo "=============================="
+source setup/link.sh
+
 if test ! $(which brew); then
   echo -e "\n\nInstalling homebrew"
   echo "=============================="
@@ -26,25 +30,19 @@ echo -e "\n\nUpdating homebrew"
 echo "=============================="
 brew update
 
-echo -e "\n\nInstalling git"
 echo "=============================="
-brew install git
-git config --global user.name "Christan Söderberg"
-git config --global user.email christian.v.soderberg@gmail.com
-git config --global fetch.prune true
-git config --global push.default current
+if test ! $(which git); then
+  echo -e "\n\nInstalling git"
+  brew install git
+fi
 
 if [ ! -d $HOME/.dotfiles ]; then
     echo -e "\n\nCloning .dotfiles into ~/.dotfiles"
     echo "=============================="
-    # git clone git@github.com:Crustan/dotfiles.git ~/.dotfiles
+    #requires ssh git clone git@github.com:Crustan/dotfiles.git ~/.dotfiles 
     git clone https://github.com/Crustan/dotfiles.git ~/.dotfiles
 fi
 cd ~/.dotfiles
-
-echo -e "\n\nSetting up symlinks..."
-echo "=============================="
-source setup/link.sh
 
 echo -e "\n\nInstall Homebrew bundle..."
 echo "=============================="
