@@ -41,11 +41,13 @@ cd ~/.dotfiles
 echo -e "\n\nInstall Homebrew bundle..."
 echo "=============================="
 brew bundle
-cd ~
+
 
 echo -e "\n\nSetting up Mac OS..."
 echo "=============================="
 source setup/macos.sh
+
+cd ~
 
 echo -e "\n\nSetting ZSH as default shell..."
 echo "=============================="
