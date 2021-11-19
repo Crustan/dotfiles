@@ -68,10 +68,6 @@ if [ ! -d $HOME/.zsh ]; then
   git clone https://github.com/reobin/typewritten.git ~/.zsh/typewritten
 fi
 
-echo -e "\n\nInstalling NVM..."
-echo "=============================="
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-
 echo -e "\n\nInstalling Node..."
 echo "=============================="
 nvm install node
