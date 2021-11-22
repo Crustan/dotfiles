@@ -1,66 +1,67 @@
 #!/usr/bin/env sh
-loginwindowtext="In case of loss, call +46 725 1337 46.\n Computer will be wiped, bricked and with no use if stolen."
 echo -e "\n\nSetting up MacOS settings"
 echo "=============================="
 
-#"Disabling OS X Gate Keeper"
+echo "Disabling OS X Gate Keeper"
 #"(You'll be able to install any app you want from here on, not just Mac App Store apps)"
 sudo spctl --master-disable
 sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-#"Don’t automatically rearrange Spaces based on most recent use"
+echo -e "\nDon’t automatically rearrange Spaces based on most recent use"
 defaults write com.apple.dock mru-spaces -bool false
 
-#"Automatically quit printer app once the print jobs complete"
+echo -e "\nAutomatically quit printer app once the print jobs complete"
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-#"Enabling subpixel font rendering on non-Apple LCDs"
+echo -e "\nEnabling subpixel font rendering on non-Apple LCDs"
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-#"Showing all filename extensions in Finder by default"
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+echo -e "\Hiding all filename extensions in Finder by default"
+defaults write NSGlobalDomain AppleShowAllExtensions -bool false
 
-#"Set swipe scroll to natural"
+echo -e "\nSet swipe scroll to natural"
 defaults write -g com.apple.swipescrolldirection -bool FALSE
 
-#"Use column view in all Finder windows by default"
+echo -e "\nUse column view in all Finder windows by default"
 defaults write com.apple.finder FXPreferredViewStyle Clmv
 
-#"Show Path bar in Finder"
+echo -e "\nShow Path bar in Finder"
 defaults write com.apple.finder ShowPathbar -bool true
 
-#"Show Status bar in Finder"
+echo -e "\nShow Status bar in Finder"
 defaults write com.apple.finder ShowStatusBar -bool true
 
-#"Avoid creating .DS_Store files on network volumes"
+echo -e "\nAvoid creating .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-#"Setting screenshots location to ~/Desktop"
+echo -e "\nSetting screenshots location to ~/Desktop"
 defaults write com.apple.screencapture location -string "$HOME/Desktop"
 
-#"Disable shadow in screenshots"
+echo -e "\nDisable shadow in screenshots"
 defaults write com.apple.screencapture disable-shadow -bool true
 
-#"Setting screenshot format to PNG"
+echo -e "\nSetting screenshot format to PNG"
 defaults write com.apple.screencapture type -string "png"
 
-#"Enabling the Develop menu and the Web Inspector in Safari"
+echo -e "\nEnabling the Develop menu and the Web Inspector in Safari"
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 
-#"Show indicator lights for open applications in the Dock"
+echo -e "\nShow indicator lights for open applications in the Dock"
 defaults write com.apple.dock show-process-indicators -bool true
 
-#"Don’t animate opening applications from the Dock"
+echo -e "\nDon’t animate opening applications from the Dock"
 defaults write com.apple.dock launchanim -bool false
 
-#"Add 2 spaces in dock"
+echo -e "\nAdd 2 spaces in dock"
 defaults write com.apple.dock persistent-apps -array-add '{tile-type="spacer-tile";}'
 defaults write com.apple.dock persistent-apps -array-add '{tile-type="spacer-tile";}'
 
+echo -e "\nAdd login window text"
+loginwindowtext="In case of loss, call +46 725 1337 46.\n Computer will be wiped, bricked and with no use if stolen."
 defaults write com.apple.loginwindow LoginwindowText $loginwindowtext
 
 #"Hide the donate message in Transmission"
@@ -69,7 +70,7 @@ defaults write com.apple.loginwindow LoginwindowText $loginwindowtext
 #"Hide the legal disclaimer in Transmission"
 #defaults write org.m0k.transmission WarningLegal -bool false
 
-# Change desktop background
+echo -e "\nChange desktop background"
 osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/crustan/.dotfiles/images/desktop.jpg"'
 
 killall SystemUIServer
