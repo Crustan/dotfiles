@@ -56,7 +56,7 @@ cask "unlox"
 cask "font-fira-code"
 
 # Install from Mac App Store
-mas "1Blocker", id: 1107421413
+mas "1Blocker", id: 1365531024
 mas "Amphetamine", id: 937984704
 mas "Bredbandskollen", id: 1147976909
 mas "ColorSlurp", id: 1287239339
