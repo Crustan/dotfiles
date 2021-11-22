@@ -14,7 +14,7 @@ For a smooth setup on a new Mac, start with the following steps before installin
 sudo xcode-select --install
 ```
 
-3. Install Rosetta 2 (needed for some apps installed with Homebrew)
+3. Install Rosetta 2 (optional, needed for BankID only)
 
 ```bash
 sudo softwareupdate --install-rosetta

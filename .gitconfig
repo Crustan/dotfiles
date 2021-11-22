@@ -10,3 +10,5 @@
 	prune = true
 [push]
 	default = current
+[core]
+	editor = code --wait

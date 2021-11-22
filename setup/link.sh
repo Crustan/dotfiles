@@ -48,6 +48,16 @@ else
     ln -s $file $DOTFILES/.mackup.cfg $mackup_target
 fi
 
+echo -e "\nInstalling .gitconfig"
+echo "=============================="
+git_target=$HOME/.gitconfig
+if [ -e $git_target ]; then
+    echo "~${git_target#$HOME} already exists... Skipping."
+else
+    echo "Creating symlink for .gitconfig"
+    ln -s $file $DOTFILES/.gitconfig $git_target
+fi
+
 echo -e "\nInstalling App settings"
 echo "=============================="
 for plist in $DOTFILES/apple/*; do
