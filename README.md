@@ -40,7 +40,9 @@ cd ~/.dotfiles
 
 ## Post-requisities
 
-1. Sign in to VS Code.
-2. Sign in to Google
-3. Sign in to Reeder
-4. Download apps from secret place
+1. Allow Karabiner Elements modifying rights
+2. Sign in to VS Code
+3. Sign in to Google
+4. Sign in to Reeder
+5. Activate Safari plugins
+6. Download apps from secret place

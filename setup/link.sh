@@ -69,3 +69,15 @@ for plist in $DOTFILES/apple/*; do
         ln -s $plist $plist_target
     fi
 done
+
+echo -e "\nInstalling services"
+echo "=============================="
+for service in $DOTFILES/services/*; do
+    service_target=$HOME/Library/Services/$( basename $service )
+    if [ -e $service_target ]; then
+        echo "~${service_target#$HOME} already exists... Skipping."
+    else
+        echo "Creating symlink for $service"
+        ln -s $service $service_target
+    fi
+done
