@@ -8,6 +8,9 @@ sudo spctl --master-disable
 sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
+echo -e "\nStart screensaver immediatly"
+defaults -currentHost write com.apple.screensaver idleTime -int 0
+
 echo -e "\nDon’t automatically rearrange Spaces based on most recent use"
 defaults write com.apple.dock mru-spaces -bool false
 
