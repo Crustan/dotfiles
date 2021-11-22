@@ -27,6 +27,7 @@ cask "browserosaurus"
 # cask "cheatsheet"
 cask "cleanmymac" # requires license
 cask "figma"
+cask "fliqlo"
 cask "flux"
 cask "google-drive"
 cask "google-chrome"
