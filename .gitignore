@@ -18,3 +18,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# karabiner backups
+config/karabiner/automatic_backups
+
+Brewfile.lock.json
