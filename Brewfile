@@ -48,7 +48,6 @@ cask "slack"
 # cask "soda-player"
 # cask "startupizer" # requires license
 cask "tableplus" # requires pro license
-cask "telegram-desktop"
 cask "transmission"
 cask "visual-studio-code"
 cask "unlox"
@@ -74,6 +73,7 @@ mas "Scenecuts Helper", id: 1540491573
 mas "Session Pomodoro Timer", id: 1521432881
 mas "Tab Suspender", id: 1495356253
 mas "Take a Break", id: 1457158844
+mas "Telegram", id: 747648890
 
 # Optional
 # cascadea
