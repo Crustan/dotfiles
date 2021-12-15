@@ -15,131 +15,358 @@
                     "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
-                    {
-                        "description": "Hyper Key",
-                        "manipulators": [
-                            {
-                                "description": "Use shift+caps_lock as caps_lock",
-                                "from": {
-                                    "key_code": "caps_lock",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "caps_lock"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "Change caps_lock key to command+control+option+shift.",
-                                "from": {
-                                    "key_code": "caps_lock",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
+                  {
+                    "description": "Hyper Key",
+                    "manipulators": [
+                      {
+                        "description": "Use shift+caps_lock as caps_lock",
+                        "from": {
+                          "key_code": "caps_lock",
+                          "modifiers": {
+                            "mandatory": ["shift"],
+                            "optional": ["caps_lock"]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "caps_lock"
+                          }
+                        ],
+                        "type": "basic"
+                      },
+                      {
+                        "description": "Change caps_lock key to command+control+option+shift.",
+                        "from": {
+                          "key_code": "caps_lock",
+                          "modifiers": {
+                            "optional": ["any"]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "left_shift",
+                            "modifiers": ["left_command", "left_control", "left_option"]
+                          }
+                        ],
+                        "type": "basic"
+                      }
+                    ]
+                  },
+                  {
+                    "description": "Hyper key + 4 => $",
+                    "manipulators": [
+                      {
+                        "from": {
+                          "key_code": "4",
+                          "modifiers": {
+                            "mandatory": [
+                              "left_command",
+                              "left_control",
+                              "left_option",
+                              "left_shift"
+                            ]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "4",
+                            "modifiers": ["right_option"]
+                          }
+                        ],
+                        "type": "basic"
+                      }
+                    ]
+                  },
+                  {
+                    "description": "Hyper key Curly Brackets",
+                    "manipulators": [
+                      {
+                        "from": {
+                          "key_code": "8",
+                          "modifiers": {
+                            "mandatory": [
+                              "left_command",
+                              "left_control",
+                              "left_option",
+                              "left_shift"
+                            ]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "8",
+                            "modifiers": ["right_option", "right_shift"]
+                          }
+                        ],
+                        "type": "basic"
+                      },
+                      {
+                        "from": {
+                          "key_code": "9",
+                          "modifiers": {
+                            "mandatory": [
+                              "left_command",
+                              "left_control",
+                              "left_option",
+                              "left_shift"
+                            ]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "9",
+                            "modifiers": ["right_option", "right_shift"]
+                          }
+                        ],
+                        "type": "basic"
+                      }
+                    ]
+                  },
+                  {
+                    "description": "Function keys work as fn keys for VS Code",
+                    "manipulators": [
+                      {
+                        "type": "basic",
+                        "from": {
+                          "key_code": "f1",
+                          "modifiers": {
+                            "optional": ["any"]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "f1"
+                          }
+                        ],
+                        "conditions": [
+                          {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": ["com.microsoft.VSCode"]
+                          }
                         ]
-                    },
-                    {
-                        "description": "Hyper key + 4 => $",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "4",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option",
-                                            "left_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "4",
-                                        "modifiers": [
-                                            "right_option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
+                      },
+                      {
+                        "type": "basic",
+                        "from": {
+                          "key_code": "f2",
+                          "modifiers": {
+                            "optional": ["any"]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "f2"
+                          }
+                        ],
+                        "conditions": [
+                          {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": ["com.microsoft.VSCode"]
+                          }
                         ]
-                    },
-                    {
-                        "description": "Hyper key Curly Brackets",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "8",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option",
-                                            "left_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "8",
-                                        "modifiers": [
-                                            "right_option",
-                                            "right_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "9",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option",
-                                            "left_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "9",
-                                        "modifiers": [
-                                            "right_option",
-                                            "right_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
+                      },
+                      {
+                        "type": "basic",
+                        "from": {
+                          "key_code": "f3",
+                          "modifiers": {
+                            "optional": ["any"]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "f3"
+                          }
+                        ],
+                        "conditions": [
+                          {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": ["com.microsoft.VSCode"]
+                          }
                         ]
-                    }
+                      },
+                      {
+                        "type": "basic",
+                        "from": {
+                          "key_code": "f4",
+                          "modifiers": {
+                            "optional": ["any"]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "f4"
+                          }
+                        ],
+                        "conditions": [
+                          {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": ["com.microsoft.VSCode"]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "basic",
+                        "from": {
+                          "key_code": "f5",
+                          "modifiers": {
+                            "optional": ["any"]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "f5"
+                          }
+                        ],
+                        "conditions": [
+                          {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": ["com.microsoft.VSCode"]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "basic",
+                        "from": {
+                          "key_code": "f6",
+                          "modifiers": {
+                            "optional": ["any"]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "f6"
+                          }
+                        ],
+                        "conditions": [
+                          {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": ["com.microsoft.VSCode"]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "basic",
+                        "from": {
+                          "key_code": "f7",
+                          "modifiers": {
+                            "optional": ["any"]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "f7"
+                          }
+                        ],
+                        "conditions": [
+                          {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": ["com.microsoft.VSCode"]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "basic",
+                        "from": {
+                          "key_code": "f8",
+                          "modifiers": {
+                            "optional": ["any"]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "f8"
+                          }
+                        ],
+                        "conditions": [
+                          {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": ["com.microsoft.VSCode"]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "basic",
+                        "from": {
+                          "key_code": "f9",
+                          "modifiers": {
+                            "optional": ["any"]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "f9"
+                          }
+                        ],
+                        "conditions": [
+                          {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": ["com.microsoft.VSCode"]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "basic",
+                        "from": {
+                          "key_code": "f10",
+                          "modifiers": {
+                            "optional": ["any"]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "f10"
+                          }
+                        ],
+                        "conditions": [
+                          {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": ["com.microsoft.VSCode"]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "basic",
+                        "from": {
+                          "key_code": "f11",
+                          "modifiers": {
+                            "optional": ["any"]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "f11"
+                          }
+                        ],
+                        "conditions": [
+                          {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": ["com.microsoft.VSCode"]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "basic",
+                        "from": {
+                          "key_code": "f12",
+                          "modifiers": {
+                            "optional": ["any"]
+                          }
+                        },
+                        "to": [
+                          {
+                            "key_code": "f12"
+                          }
+                        ],
+                        "conditions": [
+                          {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": ["com.microsoft.VSCode"]
+                          }
+                        ]
+                      }
+                    ]
+                  }
                 ]
             },
             "devices": [
