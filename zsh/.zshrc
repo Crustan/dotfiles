@@ -6,8 +6,8 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/opt/homebrew/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-# export ZSH=$HOME/.zsh
+# Path to your dotfiles installation.
+export DOTFILES=$HOME/.dotfiles
 
 # ZSH_THEME="typewritten"
 export TYPEWRITTEN_PROMPT_LAYOUT="pure"
@@ -30,7 +30,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+source $DOTFILES/zsh/aliases.zsh
+source $DOTFILES/zsh/git.zsh
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
