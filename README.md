@@ -46,3 +46,4 @@ cd ~/.dotfiles
 4. Sign in to Reeder
 5. Activate Safari plugins
 6. Download apps from secret place
+7. Replace `/etc/hosts` file content with [https://someonewhocares.org/hosts/](https://someonewhocares.org/hosts/)
