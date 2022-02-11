@@ -1,4 +1,7 @@
 # git aliases
+alias g-='git checkout -'
+alias gc='git checkout'
+alias gcm='git commit -m'
 alias ga='git add'
 alias gb='git branch'
 alias gl='git pull'
@@ -12,5 +15,5 @@ alias gmv='git mv'
 alias grm='git rm'
 alias grn='git-rename'
 alias glog="git l"
-
+alias gcleanup='git branch --v | grep "\[gone\]" | awk '\''{print $1}'\'' | xargs git branch -D'
 alias git-undo='git reset --soft HEAD~1'
