@@ -35,6 +35,7 @@ cask "iina"
 # cask "hazel" # requires license
 cask "karabiner-elements"
 cask "messenger"
+cask "ngrok"
 cask "nightfall"
 cask "notion"
 cask "plex"

@@ -52,6 +52,9 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 #     alias "$method"="lwp-request -m '$method'"
 # done
 
+# ngrok
+alias ngrok="./ngrok http"
+
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 10'"
