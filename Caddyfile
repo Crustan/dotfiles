@@ -1,0 +1,6 @@
+app.localhost {
+	reverse_proxy localhost:3000
+}
+storybook.local {
+	reverse_proxy localhost:6666
+}
