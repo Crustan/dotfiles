@@ -22,4 +22,7 @@ yarn-error.log*
 # karabiner backups
 config/karabiner/automatic_backups
 
+# secrets
+smart.zsh
+
 Brewfile.lock.json
