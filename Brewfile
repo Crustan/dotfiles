@@ -20,12 +20,13 @@ brew "wget"
 brew "zsh"
 cask "1password" # requires license
 cask "anybar"
+cask "appcleaner"
 cask "bankid"
 cask "bartender" # requires license
 cask "browserosaurus"
 # cask "caption"
 # cask "catch"
-# cask "cheatsheet"
+cask "cheatsheet"
 cask "figma"
 cask "fliqlo"
 cask "flux"
@@ -42,6 +43,7 @@ cask "nightfall"
 # cask "parallels" # requires license
 cask "postman"
 cask "quitter"
+cask "raycast"
 cask "rectangle"
 cask "slack"
 # cask "soda-player"
@@ -51,6 +53,7 @@ cask "visual-studio-code"
 cask "unlox"
 # Fonts
 cask "font-fira-code"
+cask "font-monaspace"
 
 # Install from Mac App Store
 mas "1Blocker", id: 1365531024
@@ -64,14 +67,14 @@ mas "JSONPeep", id: 1458969831
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paste", id: 967805235
-mas "PiPifier Safari Extension",id: 1160374471
-mas "The Unarchiver", id: 425424353
+mas "PiPifier Safari Extension", id: 1160374471
 mas "Reeder", id: 1449412482
 mas "Scenecuts Helper", id: 1540491573
 mas "Session Pomodoro Timer", id: 1521432881
 mas "Tab Suspender", id: 1495356253
 mas "Take a Break", id: 1457158844
-mas "Telegram", id: 747648890
+mas "Things", id: 904280696
+mas "The Unarchiver", id: 425424353
 
 # Optional
 # cascadea
