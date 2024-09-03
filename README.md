@@ -14,7 +14,7 @@ For a smooth setup on a new Mac, start with the following steps before installin
 sudo xcode-select --install
 ```
 
-3. Install Rosetta 2 (optional, needed for BankID only)
+3. Install Rosetta 2 (optional, needed for BankID and Unlox)
 
 ```bash
 sudo softwareupdate --install-rosetta
@@ -41,9 +41,14 @@ cd ~/.dotfiles
 ## Post-requisities
 
 1. Allow Karabiner Elements modifying rights
-2. Sign in to VS Code
-3. Sign in to Google
-4. Sign in to Reeder
-5. Activate Safari plugins
-6. Download apps from secret place
-7. Replace `/etc/hosts` file content with [https://someonewhocares.org/hosts/](https://someonewhocares.org/hosts/)
+1. Sign in 1Password
+1. Setup Raycast
+1. Setup Paste
+1. Setup Bartender
+2. Setup Google Drive
+1. Sign in to VS Code
+1. Sign in to Google
+1. Sign in to Reeder
+1. Activate Safari plugins
+1. Download apps from secret place
+1. Replace `/etc/hosts` file content with [https://someonewhocares.org/hosts/](https://someonewhocares.org/hosts/)
