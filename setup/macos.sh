@@ -53,11 +53,18 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 
+echo -e "\nHiding Safari's bookmarks bar by default"
+defaults write com.apple.Safari ShowFavoritesBar -bool false
+
 echo -e "\nShow indicator lights for open applications in the Dock"
 defaults write com.apple.dock show-process-indicators -bool true
 
 echo -e "\nDon’t animate opening applications from the Dock"
 defaults write com.apple.dock launchanim -bool false
+
+echo -e "\nSetting Dock to auto-hide and remove auto-hide delay"
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-delay -float 0
 
 echo -e "\nSet default app for text files to VS Code"
 defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add ’{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.microsoft.VSCode;}’

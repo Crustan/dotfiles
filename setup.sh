@@ -59,9 +59,9 @@ nvm install node
 # Reload zsh
 source ~/.zshrc
 
-echo -e "\n\nRestoring mackup backup..."
-echo "=============================="
-mackup restore
+# echo -e "\n\nRestoring mackup backup..."
+# echo "=============================="
+# mackup restore
 
 echo -e "\n\nInstalling global NPM packages..."
 echo "=============================="
