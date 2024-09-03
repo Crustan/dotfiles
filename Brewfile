@@ -71,7 +71,6 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paste", id: 967805235
 mas "Reeder", id: 1529448980
-mas "Tab Suspender", id: 1495356253
 mas "Take a Break", id: 1457158844
 mas "Things", id: 904280696
 mas "The Unarchiver", id: 425424353
