@@ -47,7 +47,7 @@ cd ~/.dotfiles
 1. Setup Bartender
 2. Setup Google Drive
 1. Sign in to VS Code
-1. Sign in to Google
+1. Sign in to Google (setup internet accounts)
 1. Sign in to Reeder
 1. Activate Safari plugins
 1. Download apps from secret place
