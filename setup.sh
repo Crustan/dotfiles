@@ -9,6 +9,8 @@ if ! command -v brew &> /dev/null; then
   echo -e "\n\nInstalling homebrew"
   echo "=============================="
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/crustan/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 if ! command -v brew &> /dev/null; then
