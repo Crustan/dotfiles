@@ -5,22 +5,22 @@
 #echo "https://github.com/account/ssh"
 #read -p "Press [Enter] key after this..."
 
-if test ! $(which brew); then
+if ! command -v brew &> /dev/null; then
   echo -e "\n\nInstalling homebrew"
   echo "=============================="
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-if test ! $(which brew); then
+if ! command -v brew &> /dev/null; then
   echo "Installing homebrew failed, exiting script..."
-  exit
+  exit 1
 fi
 
 echo -e "\n\nUpdating homebrew"
 echo "=============================="
 brew update
 
-if test ! $(which git); then
+if  command -v git &> /dev/null; then
   echo -e "\n\nInstalling git"
   echo "=============================="
   brew install git
