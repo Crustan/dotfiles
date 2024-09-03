@@ -49,6 +49,10 @@ echo -e "\n\nSetting up Mac OS..."
 echo "=============================="
 source setup/macos.sh
 
+echo -e "\n\nFixing app icons..."
+echo "=============================="
+source setup/icons.sh
+
 cd ~
 
 # Reload zsh
