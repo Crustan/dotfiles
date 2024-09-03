@@ -61,17 +61,21 @@ defaults write com.apple.dock show-process-indicators -bool true
 
 echo -e "\nDon’t animate opening applications from the Dock"
 defaults write com.apple.dock launchanim -bool false
+defaults write com.apple.dock tilesize -int 36
 
 echo -e "\nSetting Dock to auto-hide and remove auto-hide delay"
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
 
-echo -e "\nSet default app for text files to VS Code"
-defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add ’{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.microsoft.VSCode;}’
-
 echo -e "\nAdd 2 spaces in dock"
 defaults write com.apple.dock persistent-apps -array-add '{tile-type="spacer-tile";}'
 defaults write com.apple.dock persistent-apps -array-add '{tile-type="spacer-tile";}'
+
+echo -e "\nHide recent apps in Dock"
+defaults write com.apple.dock show-recents -bool false
+
+echo -e "\nSet default app for text files to VS Code"
+defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add ’{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.microsoft.VSCode;}’
 
 echo -e "\nAdd login window text"
 loginwindowtext="In case of loss, call +46 725 1337 46.\n Computer will be wiped, bricked and with no use if stolen."
