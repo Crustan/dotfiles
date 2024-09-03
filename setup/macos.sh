@@ -20,14 +20,17 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 echo -e "\nEnabling subpixel font rendering on non-Apple LCDs"
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-echo -e "\Hiding all filename extensions in Finder by default"
+echo -e "\nHiding all filename extensions in Finder by default"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool false
 
 echo -e "\nSet swipe scroll to natural"
-defaults write -g com.apple.swipescrolldirection -bool FALSE
+defaults write -g com.apple.swipescrolldirection -bool false
 
 echo -e "\nUse column view in all Finder windows by default"
-defaults write com.apple.finder FXPreferredViewStyle Clmv
+defaults write com.apple.finder FXPreferredViewStyle clmv
+
+echo -e "\nUse sorting by folders and name as default"
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 echo -e "\nShow Path bar in Finder"
 defaults write com.apple.finder ShowPathbar -bool true
