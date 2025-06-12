@@ -24,5 +24,6 @@ config/karabiner/automatic_backups
 
 # secrets
 smart.zsh
+akind.zsh
 
 Brewfile.lock.json

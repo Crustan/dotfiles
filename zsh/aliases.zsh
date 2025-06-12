@@ -65,3 +65,7 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 
 # Connect to 1337 VPN 
 alias 1337vpn="sudo openfortivpn"
+
+# Colima
+alias colima-start="colima start --cpu 8 --memory 8 --network-address --arch aarch64 --vm-type=vz --vz-rosetta --mount-type=virtiofs --verbose"
+
