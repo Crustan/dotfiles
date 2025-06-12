@@ -12,3 +12,14 @@
 	default = current
 [core]
 	editor = code --wait
+[pull]
+	rebase = true
+	prune = true
+[alias]
+	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+	default = !git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
+	gone = "!git branch -vv | grep \": gone]\" | grep -v \"\\*\" | awk '{ print $1 }' | xargs -r git branch -D"
+	check-merged = "!f() { DEFAULT=$(git default); git checkout ${1-$DEFAULT} && git for-each-ref refs/heads/ --format=\"%(refname:short)\" | while IFS= read -r BRANCH; do MERGE_BASE=$(git merge-base ${1-$DEFAULT} $BRANCH); if [[ $(git cherry ${1-$DEFAULT} $(git commit-tree $(git rev-parse \"$BRANCH^{tree}\") -p $MERGE_BASE -m _)) == -* ]]; then $2 \"$BRANCH\"; fi; done; }; f"
+    	dryclean = "!git check-merged ${1-$(git default)} 'echo'"
+    	bclean = "!git check-merged ${1-$(git default)} 'git branch -D'"        
+	bdone = "!f() { DEFAULT=$(git default); git checkout ${1-$DEFAULT} && git up && git bclean ${1-$DEFAULT}; }; f"
