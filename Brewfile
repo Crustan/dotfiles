@@ -1,10 +1,8 @@
 # specify a directory to install
 cask_args appdir: '/Applications'
 tap "homebrew/bundle"
-# tap "over-sh/bun"
 
 # Brew formulae
-# brew "bun"
 brew "docker"
 brew "docker-compose"
 brew "ffmpeg"
@@ -16,6 +14,7 @@ brew "mas"
 brew "nvm"
 brew "openconnect"
 brew "openfortivpn"
+brew "pnpm"
 brew "youtube-dl"
 brew "wget"
 brew "zsh"
@@ -26,7 +25,6 @@ cask "anybar"
 cask "appcleaner"
 cask "bankid"
 cask "bartender" # requires license
-cask "beeper" 
 cask "browserosaurus"
 cask "chatgpt"
 cask "cheatsheet"
@@ -38,7 +36,6 @@ cask "karabiner-elements"
 cask "kap"
 cask "messenger"
 cask "ngrok"
-cask "nightfall"
 cask "notion"
 cask "postman"
 cask "quitter"
@@ -50,7 +47,6 @@ cask "transmission"
 cask "unlox"
 cask "utm"
 cask "visual-studio-code"
-cask "warp"
 
 # Fonts
 cask "font-fira-code"
