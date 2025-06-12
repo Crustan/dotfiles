@@ -59,6 +59,10 @@ defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.Web
 echo -e "\nHiding Safari's bookmarks bar by default"
 defaults write com.apple.Safari ShowFavoritesBar -bool false
 
+echo -e "\nSpeed up terminal cursor"
+defaults write -g InitialKeyRepeat -int 10
+defaults write -g KeyRepeat -int 1
+
 echo -e "\nShow indicator lights for open applications in the Dock"
 defaults write com.apple.dock show-process-indicators -bool true
 
