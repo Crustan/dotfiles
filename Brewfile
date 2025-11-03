@@ -3,6 +3,7 @@ cask_args appdir: '/Applications'
 tap "homebrew/bundle"
 
 # Brew formulae
+brew "colima"
 brew "docker"
 brew "docker-compose"
 brew "ffmpeg"
@@ -11,12 +12,13 @@ brew "iconsur"
 brew "imagemagick"
 brew "mackup"
 brew "mas"
+brew "mkcert"
 brew "nvm"
 brew "openconnect"
 brew "openfortivpn"
 brew "pnpm"
-brew "youtube-dl"
 brew "wget"
+brew "yy-dlp"
 brew "zsh"
 
 # Brew Casks
@@ -25,15 +27,17 @@ cask "anybar"
 cask "appcleaner"
 cask "bankid"
 cask "bartender" # requires license
+cask "beeper"
 cask "browserosaurus"
 cask "chatgpt"
 cask "cheatsheet"
 cask "figma"
-cask "google-drive"
 cask "google-chrome"
+cask "google-drive"
 cask "iina"
 cask "karabiner-elements"
 cask "kap"
+cask "keycastr"
 cask "messenger"
 cask "ngrok"
 cask "notion"
@@ -50,6 +54,7 @@ cask "visual-studio-code"
 
 # Fonts
 cask "font-fira-code"
+cask "font-jetbrains-mono"
 cask "font-monaspace"
 
 # MacBook Pro 2011 Home Server
