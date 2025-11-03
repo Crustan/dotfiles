@@ -20,6 +20,7 @@ alias du='du -h -c' # calculate disk usage for a folder
 
 # Applications
 alias ios='open -a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
+alias podcast='yt-dlp -f bestaudio --extract-audio --audio-format m4a -o "~/Library/Mobile Documents/com~apple~CloudDocs/Podcasts/%(title)s.%(ext)s"'
 
 # Gatekeeper disable/enable
 alias gatekeeperdown="sudo spctl --master-disable"

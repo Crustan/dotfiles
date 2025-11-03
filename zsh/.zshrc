@@ -61,6 +61,7 @@ esac
 # pnpm end
 
 export DOCKER_CONTEXT=colima
+export COMPOSE_FILE=docker-compose.yml:docker-compose.override.yml
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/crustan/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
