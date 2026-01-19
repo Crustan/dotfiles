@@ -78,6 +78,10 @@ echo -e "\nAdd 2 spaces in dock"
 defaults write com.apple.dock persistent-apps -array-add '{tile-type="spacer-tile";}'
 defaults write com.apple.dock persistent-apps -array-add '{tile-type="spacer-tile";}'
 
+echo -e "\nChange Launchpad layout to 6x8 grid"
+defaults write com.apple.dock springboard-columns -int 8
+defaults write com.apple.dock springboard-rows -int 6
+
 echo -e "\nHide recent apps in Dock"
 defaults write com.apple.dock show-recents -bool false
 
