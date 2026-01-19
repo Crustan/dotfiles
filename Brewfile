@@ -28,7 +28,7 @@ cask "appcleaner"
 cask "bankid"
 cask "bartender" # requires license
 cask "beeper"
-cask "browserosaurus"
+cask "browserino"
 cask "chatgpt"
 cask "cheatsheet"
 cask "figma"
