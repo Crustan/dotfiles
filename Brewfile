@@ -5,6 +5,7 @@ tap "homebrew/bundle"
 # Brew formulae
 brew "colima"
 brew "docker"
+brew "docker-buildx"
 brew "docker-compose"
 brew "ffmpeg"
 brew "gh"
@@ -28,6 +29,7 @@ cask "appcleaner"
 cask "bankid"
 cask "bartender" # requires license
 cask "beeper"
+cask "betterdisplay"
 cask "browserino"
 cask "chatgpt"
 cask "cheatsheet"
@@ -41,12 +43,14 @@ cask "keycastr"
 cask "messenger"
 cask "ngrok"
 cask "notion"
+cask "opal-app"
 cask "postman"
 cask "quitter"
 cask "raycast"
 cask "rectangle"
 cask "slack"
 cask "spotify"
+cask "termius"
 cask "transmission"
 cask "unlox"
 cask "utm"
@@ -64,13 +68,10 @@ cask "font-monaspace"
 
 # Install from Mac App Store
 
-mas "ColorSlurp", id: 1287239339
-mas "Day One", id: 1055511498
 mas "JSONPeep", id: 1458969831
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Paste", id: 967805235
 mas "Reeder", id: 1529448980
 mas "Take a Break", id: 1457158844
 mas "Things", id: 904280696
@@ -82,12 +83,15 @@ mas "1Password", id: 1569813296
 mas "Grammarly Safari Extension", id: 1462114288
 mas "PiPifier", id: 1160374471
 mas "Super Agent", id: 1568262835
-mas "Wappalyzer", id: 1520333300
 
 # Optional
 # cascadea
 # mas "Amphetamine", id: 937984704
 # mas "Bredbandskollen", id: 1147976909
+# mas "ColorSlurp", id: 1287239339
+# mas "Day One", id: 1055511498
 # mas "Hush Safari Extension", id: 1544743900
+# mas "Paste", id: 967805235
 # mas "Scenecuts Helper", id: 1540491573
 # mas "Session Pomodoro Timer", id: 1521432881
+# mas "Wappalyzer", id: 1520333300
