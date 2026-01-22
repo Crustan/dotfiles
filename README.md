@@ -43,12 +43,13 @@ cd ~/.dotfiles
 1. Allow Karabiner Elements modifying rights
 1. Sign in 1Password
 1. Setup Raycast
-1. Setup Paste
 1. Setup Bartender
-2. Setup Google Drive
+1. Setup Google Drive
 1. Sign in to VS Code
 1. Sign in to Google (setup internet accounts)
 1. Sign in to Reeder
 1. Activate Safari plugins
+1. Setup Wallet & Apple Pay
+1. Download ProNotes (https://pronotes.app/direct-download) 
 1. Download apps from secret place
 1. Replace `/etc/hosts` file content with [https://someonewhocares.org/hosts/](https://someonewhocares.org/hosts/)
