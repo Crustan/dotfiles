@@ -82,6 +82,9 @@ echo -e "\nChange Launchpad layout to 6x8 grid"
 defaults write com.apple.dock springboard-columns -int 8
 defaults write com.apple.dock springboard-rows -int 6
 
+echo -e "\nClear all apps from Dock"                                                                                         
+defaults delete com.apple.dock persistent-apps 
+
 echo -e "\nHide recent apps in Dock"
 defaults write com.apple.dock show-recents -bool false
 
