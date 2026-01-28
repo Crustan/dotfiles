@@ -89,7 +89,7 @@ echo -e "\nHide recent apps in Dock"
 defaults write com.apple.dock show-recents -bool false
 
 echo -e "\nSet default app for text files to VS Code"
-defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add ’{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.microsoft.VSCode;}’
+defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add '<dict><key>LSHandlerContentType</key><string>public.plain-text</string><key>LSHandlerRoleAll</key><string>com.microsoft.VSCode</string></dict>'
 
 echo -e "\nAdd login window text"
 loginwindowtext="In case of loss, call +46 725 1337 46.\n Computer will be wiped, bricked and with no use if stolen."

@@ -45,6 +45,9 @@ echo -e "\n\nInstall Homebrew bundle..."
 echo "=============================="
 brew bundle
 
+echo -e "\n\nRefreshing shell environment..."
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 echo -e "\n\nSetting up Mac OS..."
 echo "=============================="
 source setup/macos.sh

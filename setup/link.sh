@@ -35,7 +35,7 @@ if [ -e $zshrc_target ]; then
     echo "~${zshrc_target#$HOME} already exists... Skipping."
 else
     echo "Creating symlink for .zshrc"
-    ln -s $file $DOTFILES/zsh/.zshrc $zshrc_target
+    ln -s $DOTFILES/zsh/.zshrc $zshrc_target
 fi
 
 echo -e "\nInstalling .mackup.cfg"
@@ -45,7 +45,7 @@ if [ -e $mackup_target ]; then
     echo "~${mackup_target#$HOME} already exists... Skipping."
 else
     echo "Creating symlink for .mackup.cfg"
-    ln -s $file $DOTFILES/.mackup.cfg $mackup_target
+    ln -s $DOTFILES/.mackup.cfg $mackup_target
 fi
 
 echo -e "\nInstalling .gitconfig"
@@ -55,7 +55,7 @@ if [ -e $git_target ]; then
     echo "~${git_target#$HOME} already exists... Skipping."
 else
     echo "Creating symlink for .gitconfig"
-    ln -s $file $DOTFILES/.gitconfig $git_target
+    ln -s $DOTFILES/.gitconfig $git_target
 fi
 
 echo -e "\nInstalling App settings"

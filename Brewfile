@@ -19,7 +19,7 @@ brew "openconnect"
 brew "openfortivpn"
 brew "pnpm"
 brew "wget"
-brew "yy-dlp"
+brew "yt-dlp"
 brew "zsh"
 
 # Brew Casks
