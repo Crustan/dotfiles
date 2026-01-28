@@ -1,10 +1,9 @@
 # specify a directory to install
 cask_args appdir: '/Applications'
-tap "homebrew/bundle"
 tap "AlexStrNik/Browserino"
 
 # Brew formulae
-brew "browserino"
+brew "browserino", args: ["no-quarantine"]
 brew "colima"
 brew "docker"
 brew "docker-buildx"
