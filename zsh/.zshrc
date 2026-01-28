@@ -22,7 +22,6 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $DOTFILES/zsh/aliases.zsh
 source $DOTFILES/zsh/git.zsh
-source $DOTFILES/zsh/akind.zsh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
