@@ -6,6 +6,7 @@
 [user]
 	name = Christian Söderberg
 	email = christian.v.soderberg@gmail.com
+	signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDCQ80o6zxGC4lsJ2X5XHDxDlgDEuC+4cjZgVQ0Kq01BZYKb5JOMRv93W8OpkH+WTEuahj5rsv+Z2rTTVUmUB03wxNf9G96SR+FZOv2ZMWNSa/6UTEjmN21tc5NHz6WJmo5ooL6BYFlaOx0m5o/9Ph3+J92/CiR6YwHJxMqc9wfcPHc89BDa5M+AXq/Ins9pnU2SvEYAN06U06fIdt5EiYFi+anImMCRMauwwnqOuYlSgGXDhn+FJLpJF6M4749UZNjGERUvAo04cIyUyZ3NpsXOB5CldJMY8770oli7xCna/CKYVLoyYL3FpselNve4VbIJttWk7uolDQSjUFpIk95nCENd2wC5sVhec3etwdABGdDf4+k6dSGbVqbVPPGZmwmE4ZfG34AKmxbpzS/adUsirAUPN0sJhyb+M/xOs4o7fUNPYdGFGxwq49vxOm3n/LCrWuxr5T36LY/yXAl0H6OXbmjLz6uhhBKR2i3YcM6AzxD4yBmpNzpN9DZP2U1UVK0yaxTHAN/CxIXLL0XiAtpkZ0fUWmqba8pnUB94MPjCq7WqUF98ar8djH+1zfL2MXnDmVqJEKotRxAAq2YQG5jtGIdBVzLDDO01uUskdkBBWvVdK1NJ3aQlUcHXc3rD3KoRCamkD4tXrHeUk0gQhMVAEhwn3sZKbXuid7Vy6iASw==
 [fetch]
 	prune = true
 [push]
@@ -23,3 +24,9 @@
     	dryclean = "!git check-merged ${1-$(git default)} 'echo'"
     	bclean = "!git check-merged ${1-$(git default)} 'git branch -D'"        
 	bdone = "!f() { DEFAULT=$(git default); git checkout ${1-$DEFAULT} && git up && git bclean ${1-$DEFAULT}; }; f"
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true

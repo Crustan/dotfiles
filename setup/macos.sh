@@ -4,8 +4,8 @@ echo "=============================="
 
 echo "Disabling OS X Gate Keeper"
 #"(You'll be able to install any app you want from here on, not just Mac App Store apps)"
-sudo spctl --master-disable
-sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
+#sudo spctl --master-disable
+#sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 echo -e "\nStart screensaver immediatly"
@@ -101,6 +101,10 @@ echo -e "\nAdd login window text"
 loginwindowtext="In case of loss, call +46 725 1337 46.\n Computer will be wiped, bricked and with no use if stolen."
 defaults write com.apple.loginwindow LoginwindowText $loginwindowtext
 
+echo -e "\nSet Desktop icon size"
+defaults write com.apple.finder DesktopViewSettings -dict \ 
+  IconViewSettings '{iconSize = 32;}'
+
 #"Hide the donate message in Transmission"
 #defaults write org.m0k.transmission WarningDonate -bool false
 
@@ -108,7 +112,7 @@ defaults write com.apple.loginwindow LoginwindowText $loginwindowtext
 #defaults write org.m0k.transmission WarningLegal -bool false
 
 echo -e "\nChange desktop background"
-osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/crustan/.dotfiles/images/desktop.jpg"'
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/crustan/.dotfiles/images/desktop.png"'
 
 killall SystemUIServer
 killall Finder Dock
