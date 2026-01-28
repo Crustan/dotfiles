@@ -1,8 +1,10 @@
 # specify a directory to install
 cask_args appdir: '/Applications'
 tap "homebrew/bundle"
+tap "AlexStrNik/Browserino"
 
 # Brew formulae
+brew "browserino"
 brew "colima"
 brew "docker"
 brew "docker-buildx"
@@ -30,7 +32,6 @@ cask "bankid"
 cask "bartender" # requires license
 cask "beeper"
 cask "betterdisplay"
-cask "browserino"
 cask "chatgpt"
 cask "cheatsheet"
 cask "figma"
