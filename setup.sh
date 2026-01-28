@@ -22,7 +22,7 @@ echo -e "\n\nUpdating homebrew"
 echo "=============================="
 brew update
 
-if  command -v git &> /dev/null; then
+if ! command -v git &> /dev/null; then
   echo -e "\n\nInstalling git"
   echo "=============================="
   brew install git
