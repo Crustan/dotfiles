@@ -2,11 +2,42 @@
 echo -e "\n\nSetting up MacOS settings"
 echo "=============================="
 
+echo -e "\nSet appearance to Dark mode"
+defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
+
+echo -e "\nSet accent color to Graphite"
+defaults write NSGlobalDomain AppleAccentColor -int -1
+
+echo -e "\nSet highlight color to Graphite"
+defaults write NSGlobalDomain AppleHighlightColor -string "0.847059 0.847059 0.862745"
+
+echo -e "\nSet sidebar icon size to Small"
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
+
 echo "Disabling OS X Gate Keeper"
 #"(You'll be able to install any app you want from here on, not just Mac App Store apps)"
 #sudo spctl --master-disable
 #sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
 defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+echo -e "\nDisable Spotlight keyboard shortcut"
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "{enabled = 0;}"
+
+echo -e "\nSet Globe key to Do Nothing"
+defaults write com.apple.HIToolbox AppleFnUsageType -int 0
+
+echo -e "\nEnable full keyboard navigation"
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+echo -e "\nHide Siri from menubar"
+defaults write com.apple.Siri StatusMenuVisible -bool false
+
+echo -e "\nHide Spotlight from menubar"
+defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1
+
+echo -e "\nShow clock only (hide date and day of week)"
+defaults write com.apple.menuextra.clock ShowDate -int 0
+defaults write com.apple.menuextra.clock ShowDayOfWeek -bool false
 
 echo -e "\nStart screensaver immediatly"
 defaults -currentHost write com.apple.screensaver idleTime -int 0
@@ -74,6 +105,20 @@ echo -e "\nSetting Dock to auto-hide and remove auto-hide delay"
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
 
+echo -e "\nSet up hot corners (all with Ctrl+Opt+Shift+Cmd)"
+# Top-left: Start Screen Saver
+defaults write com.apple.dock wvous-tl-corner -int 5
+defaults write com.apple.dock wvous-tl-modifier -int 1966080
+# Top-right: Notification Center
+defaults write com.apple.dock wvous-tr-corner -int 12
+defaults write com.apple.dock wvous-tr-modifier -int 1966080
+# Bottom-left: Desktop
+defaults write com.apple.dock wvous-bl-corner -int 4
+defaults write com.apple.dock wvous-bl-modifier -int 1966080
+# Bottom-right: Quick Note
+defaults write com.apple.dock wvous-br-corner -int 14
+defaults write com.apple.dock wvous-br-modifier -int 1966080
+
 echo -e "\nAdd 2 spaces in dock"
 defaults write com.apple.dock persistent-apps -array-add '{tile-type="spacer-tile";}'
 defaults write com.apple.dock persistent-apps -array-add '{tile-type="spacer-tile";}'
@@ -102,9 +147,24 @@ echo -e "\nSet Desktop view options"
 /usr/libexec/PlistBuddy -c "Add :DesktopViewSettings:IconViewSettings:textSize integer 12" ~/Library/Preferences/com.apple.finder.plist
 defaults write com.apple.finder DesktopViewSettings -dict-add GroupBy Kind
 
+echo -e "\nSet up app keyboard shortcuts"
+# All Applications
+defaults write NSGlobalDomain NSUserKeyEquivalents -dict-add "Show Help menu" "^~\$@/"
+defaults write NSGlobalDomain NSUserKeyEquivalents -dict-add "Show Next Tab" "^~\$@\U2192"
+defaults write NSGlobalDomain NSUserKeyEquivalents -dict-add "Show Previous Tab" "^~\$@\U2190"
+defaults write NSGlobalDomain NSUserKeyEquivalents -dict-add "Lock Screen" "^~\$@\U00a7"
+
+# Google Chrome
+defaults write com.google.Chrome NSUserKeyEquivalents -dict-add "Select Next Tab" "^~\$@\U2192"
+defaults write com.google.Chrome NSUserKeyEquivalents -dict-add "Select Previous Tab" "^~\$@\U2190"
+
+# Safari
+defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "New Personal Window" "^~\$@2"
+defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "New Work Window" "^~\$@1"
+
 echo -e "\nAdd login window text"
 loginwindowtext="In case of loss, call +46 725 1337 46.\n Computer will be wiped, bricked and with no use if stolen."
-defaults write com.apple.loginwindow LoginwindowText $loginwindowtext
+defaults write com.apple.loginwindow LoginwindowText "$loginwindowtext"
 
 echo -e "\nSet Desktop icon size"
 defaults write com.apple.finder DesktopViewSettings -dict \ 
