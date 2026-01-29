@@ -141,15 +141,14 @@ echo -e "\nSet default app for text files to VS Code"
 defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add '<dict><key>LSHandlerContentType</key><string>public.plain-text</string><key>LSHandlerRoleAll</key><string>com.microsoft.VSCode</string></dict>'
 
 echo -e "\nSet Desktop view options"
-/usr/libexec/PlistBuddy -c "Delete :DesktopViewSettings:IconViewSettings" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null
-
-/usr/libexec/PlistBuddy -c "Add :DesktopViewSettings:IconViewSettings dict" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Add :DesktopViewSettings:IconViewSettings:iconSize integer 32" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Add :DesktopViewSettings:IconViewSettings:gridSpacing integer 32" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Add :DesktopViewSettings:IconViewSettings:arrangeBy string dateAdded" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Add :DesktopViewSettings:IconViewSettings:labelOnBottom bool false" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Add :DesktopViewSettings:IconViewSettings:textSize integer 12" ~/Library/Preferences/com.apple.finder.plist
-defaults write com.apple.finder DesktopViewSettings -dict-add GroupBy Kind
+defaults write com.apple.finder DesktopViewSettings -dict \
+  IconViewSettings -dict \
+    iconSize 32 \
+    gridSpacing 32 \
+    arrangeBy "dateAdded" \
+    labelOnBottom 0 \
+    textSize 12 \
+  GroupBy "Kind"
 
 echo -e "\nSet up app keyboard shortcuts"
 # All Applications
@@ -169,10 +168,6 @@ defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "New Work Window"
 echo -e "\nAdd login window text"
 loginwindowtext="In case of loss, call +46 725 1337 46.\n Computer will be wiped, bricked and with no use if stolen."
 defaults write com.apple.loginwindow LoginwindowText "$loginwindowtext"
-
-echo -e "\nSet Desktop icon size"
-defaults write com.apple.finder DesktopViewSettings -dict \ 
-  IconViewSettings '{iconSize = 32;}'
 
 #"Hide the donate message in Transmission"
 #defaults write org.m0k.transmission WarningDonate -bool false
