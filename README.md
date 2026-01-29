@@ -50,6 +50,7 @@ cd ~/.dotfiles
 1. Sign in to Reeder
 1. Activate Safari plugins
 1. Setup Wallet & Apple Pay
-1. Download ProNotes (https://pronotes.app/direct-download) 
+1. Download ProNotes (https://pronotes.app/direct-download)
 1. Download apps from secret place
 1. Replace `/etc/hosts` file content with [https://someonewhocares.org/hosts/](https://someonewhocares.org/hosts/)
+1. Open all apps and allow access rights

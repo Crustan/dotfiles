@@ -105,6 +105,10 @@ echo -e "\nSetting Dock to auto-hide and remove auto-hide delay"
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
 
+echo -e "\nSet Downloads folder to List view and Folder display"
+defaults write com.apple.dock showAppExposeGestureEnabled -bool true
+defaults write com.apple.dock persistent-others -array-add '<dict><key>tile-data</key><dict><key>arrangement</key><integer>1</integer><key>displayas</key><integer>1</integer><key>file-data</key><dict><key>_CFURLString</key><string>file:///Users/'$USER'/Downloads/</string><key>_CFURLStringType</key><integer>15</integer></dict><key>showas</key><integer>2</integer></dict><key>tile-type</key><string>directory-tile</string></dict>'
+
 echo -e "\nSet up hot corners (all with Ctrl+Opt+Shift+Cmd)"
 # Top-left: Start Screen Saver
 defaults write com.apple.dock wvous-tl-corner -int 5
