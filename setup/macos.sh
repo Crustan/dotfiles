@@ -140,15 +140,12 @@ defaults write com.apple.dock show-recents -bool false
 echo -e "\nSet default app for text files to VS Code"
 defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add '<dict><key>LSHandlerContentType</key><string>public.plain-text</string><key>LSHandlerRoleAll</key><string>com.microsoft.VSCode</string></dict>'
 
-echo -e "\nSet Desktop view options"
-defaults write com.apple.finder DesktopViewSettings -dict \
-  IconViewSettings -dict \
-    iconSize 32 \
-    gridSpacing 32 \
-    arrangeBy "dateAdded" \
-    labelOnBottom 0 \
-    textSize 12 \
-  GroupBy "Kind"
+echo -e "\nSet Desktop icon size to 32"
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 32" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null || \
+/usr/libexec/PlistBuddy -c "Add :DesktopViewSettings:IconViewSettings:iconSize integer 32" ~/Library/Preferences/com.apple.finder.plist 2>/dev/null
+
+echo -e "\nSet Desktop to group by Kind"
+defaults write com.apple.finder DesktopViewSettings -dict-add GroupBy "Kind"
 
 echo -e "\nSet up app keyboard shortcuts"
 # All Applications
